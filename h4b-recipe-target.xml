@@ -1,0 +1,4 @@
+<table>
+    <tr><th>title</th><th>is vegan</th><th>ingredients</th></tr>
+    <tr><td>Tofurkey</td><td>true</td><td>tofu, turkey flavor</td></tr>
+</table>"
