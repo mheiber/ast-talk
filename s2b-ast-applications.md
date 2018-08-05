@@ -1,4 +1,4 @@
-## Uses of ASTs (repeat)
+## Uses of ASTs
 
 AST useful for:
 - programming language implementation

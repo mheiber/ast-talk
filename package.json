@@ -1,0 +1,16 @@
+{
+  "name": "ast-guild",
+  "version": "1.0.0",
+  "description": "",
+  "main": "h4c-recipe-code.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs-promise": "^2.0.3",
+    "jscodeshift": "^0.5.1",
+    "jsdom": "^11.12.0"
+  }
+}

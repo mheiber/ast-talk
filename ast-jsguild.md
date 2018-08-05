@@ -18,7 +18,6 @@ AST useful for:
     - refactoring
 
 
-
 ## Abstract Syntax Tree
 
 - tree representation of code
@@ -183,9 +182,12 @@ Syntax:
 **Abstract** Syntax Tree
 - boring stuff has been removed
 
-(image here with boring stuff)
-(image here boring stuff removed)
-
+Non-Abstract Syntax Tree (extra stuff we don't care about):
+- Expression
+    - BinaryExpression
+        - AdditionExpression
+            - left: 3
+            - right: 4
 
 --
 ## Problem: what modules are imported?
@@ -256,8 +258,6 @@ ast.find(j.CallExpression, { callee: { name: 'define', type: 'Identifier' } })
 ```
 
 
-
-
 ## AST
 
 - tree representation of code
@@ -273,7 +273,7 @@ ast.find(j.CallExpression, { callee: { name: 'define', type: 'Identifier' } })
 <img src="ast.png" height="400">
 
 ---
-## Uses of ASTs (repeat)
+## Uses of ASTs
 
 AST useful for:
 - programming language implementation
@@ -294,44 +294,13 @@ AST useful for:
 
 traditional compiler's job: source code to target code
 
-<!-- 
-similar to:
-- interpreters
-- just-in-time compilers
-
-same as:
-- transpiler
--->
-
 
 ---
-## Side Note: compiler, JIT, interpreter
-
-Compiled    : C, C++, Haskell, OCaml
-
-Interpreted : Python (CPython)
-
-JITed       : JavaScript, Java, Python (PyPy)
-
-<!-- if there are questions about this, we can talk about it at the end -->
-
-
----
-## Background: Compilers
-
-compiler's job: source code to target code
-
-
-```js
-const compile = (source) => {
-    // implementation here
-
-    return targetCode
-}
-```
 
 
 ## Compilers
+
+traditional compiler's job: source code to target code
 
 sourceCode --> sourceAst --> IR --> targetCode
 
@@ -339,58 +308,44 @@ sourceCode --> sourceAst --> IR --> targetCode
 const compile = source => {
     const ast = parse(source)
     const ir = transform(ast)
-    // TODO: error-reporting
     return ir.toCode()
 }
 ```
 
-<!--
+`parse('2*3 + 42')`
 
-ir: can be an AST. So in the case of TS compiler, all it has to do for the most part is get rid of the nodes in its AST that are for type annotations, then keep the rest. So the transform step is a somewhat trivial AST to AST transformation.
+- AdditionExpression
+    - Left
+        - Literal: 2
+    - Right
+    - MultiplicationExpression
+        - Left
+            - Literal: 3
+        - Right:
+            - Literal: 42
 
-in the case of GCC and LLVM, they have several layers of intermediate representation, and theirs are not really tree-shaped.
 
--->
+`compile('2*3 + 42')`
 
-## sourceCode --> sourceAst --> targetCode
+// `ADDI R1 3 42; MULI R0 2 R1`
 
-source: `2*3 + 42`
+## Side Note: compiler, JIT, interpreter
 
-tokens: `| 2 | * | 3 | + | 42 | `
+Compiled    : C, C++, Go, Haskell, OCaml, Rust
 
-ast: 
+Interpreted : Bash, Python, Ruby, PHP
 
-<img src="tree-mult-high.jpg" height="200px"></img>
+JITed       : JavaScript, Java, Lua, Python (PyPy)
 
-target: `ADDI R1 3 42; MULI R0 2 R1`
-
-<!-- note: grammar for this language gives mult lower precedence than addition  
-
-then come back here and ask about how one might write code to generate the target code from the sample code
-
-If someone doesn't ask about the "wrong" instructions generated, brint it up.
-: can discuss: see how the AST is an intermediate representation of code, and it has information useful for code generation. It makes sense that the AST would incode information about operator precedence. Whether + is higher or lower in the tree than *. Go into that a bit more, also relates to what it means to say the AST is "abstract"
--->
-
----
-## ASTs and operator precedence
-
-AST for Multiplication has low precedence:
-
-<img src="tree-mult-high.jpg" height="200px"></img> `ADDI R1 3 42; MULI R0 2 R1`
-
-AST for Multiplication has high precedence:
-
-<img src="tree-mult-low.jpg" height="200px"></img>
-`MULI R1 2 3; MULI R0 42 R1`
-
----
 
 ## Where do ASTs come from?
 
 - parsers make ASTs
 
-<!-- typically by "parser" people mean a thing that tokenizes and then generates an AST from the tokens-->
+```js
+const ast = parse(sourceCode)`
+```
+
 
 ---
 ## Where do Parsers come from?
@@ -439,35 +394,6 @@ const parseBinaryExpression = () => {
 }
 ```
 
-
----
----
-## Parser Generator
-
-
-
----
-## Antlr demo
-
-- antlr grammar for expressions
-- **non-**abstract syntax tree example
-
-<!--
-
-- antlr website
- generates parsers in Java, C#, C++,[2] JavaScript, Python2, Python3, Swift, and Go.
- can get slightly better perf by hand-writing, so most compilers out there are 
-
--->
-<!-- fix the operator precedence in simple example antlr 2 * 3 + 42 
--->
-
-<!-- show the non-abstract syntax tree
-
-for the parser to be efficient, you ideally want it to be able to know, given the characters I've seen before and what character I'm looking at right now, what is the next AST node to create? So internally, Antlr makes a parser that acts more like what is shown in this grammar.
---> 
-
----
 ## Use ASTs for
 
 - transform code structure

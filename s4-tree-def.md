@@ -1,6 +1,8 @@
 ## Abstract Syntax **Tree**
 
 Tree:
-- The root has zero parents
-- Every node except the root has exactly one parent
+- The root node has zero parents
+- All other nodes have exactly one parent
+
+<!-- demo -->
 

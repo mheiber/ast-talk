@@ -1,0 +1,10 @@
+<CallExpression>
+    <Callee type="Identifier" name="define" />
+    <Arguments>
+        <ArrayExpression>
+            <Literal value="@jscore" />
+            <Literal value="@ui" />
+        </ArrayExpression>
+        <ArrowExpression />
+    </Arguments>
+</CallExpression>
