@@ -6,35 +6,15 @@ const query = 'SELECT NAME, ADDRESS FROM PERSON'
 console.log(JSON.stringify(parse(query), null, 2))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*
+CREATE TABLE PERSONS (
+    NAME VARCHAR(256),
+    ADDRESS VARCHAR(256),
+    AGE IMAGINARY
+)
+*/
 
 /*
-
-type PersonsTableT = {
-    'name': string
-    'age': number
-    'address': string
-}
 
 const rows = queryDb(query)
 
