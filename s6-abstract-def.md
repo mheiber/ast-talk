@@ -3,6 +3,8 @@
 
 Non-Abstract Syntax Tree for `1 + 2`
 
+(has stuff we don't care about)
+
 - Expression
     - BinaryExpression
         - AdditionExpression

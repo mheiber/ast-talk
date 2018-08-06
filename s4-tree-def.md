@@ -4,5 +4,5 @@ Tree:
 - The root node has zero parents
 - All other nodes have exactly one parent
 
-<!-- demo -->
+<!-- demo: vs recipe.xml -->
 

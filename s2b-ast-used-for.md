@@ -1,5 +1,5 @@
 ## Use ASTs for
 
 - transform code structure
-- generate different code
+- generate or run code in a different language
 - validate the code structure
