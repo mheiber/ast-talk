@@ -8,3 +8,5 @@
         <ArrowExpression />
     </Arguments>
 </CallExpression>
+
+<!-- :vs s7*  spl define-xml-code.js -->

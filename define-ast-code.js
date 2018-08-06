@@ -15,4 +15,6 @@ const modules = ast.find(j.CallExpression, {
 
 console.log(modules)
 
-// see side-by-side.md
+
+
+// :e side-by-side.js

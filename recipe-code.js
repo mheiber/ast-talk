@@ -14,3 +14,4 @@ const recipes = [...document.querySelectorAll('.recipe')].map(recipeEl => (
 
 console.log(JSON.stringify(recipes, null, 2))
 
+
