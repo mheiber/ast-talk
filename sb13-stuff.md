@@ -4,5 +4,5 @@
 - Type-safe SQL queries with strings <!-- demo sql-example.js -->
 - Baschist: the Bash linter   <!-- bash-example.sh -->
 - explainshell
-    - git push --set-upstream origin $(git branch | cut -d" " -f2)
+    - explain 'git push --set-upstream origin $(git branch | cut -d" " -f2)'
 

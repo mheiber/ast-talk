@@ -1,3 +1,4 @@
+<!-- AST for `define(['@jscore', '@sys-ui'], (jsCore, ui) => {})` -->
 <CallExpression>
     <Callee type="Identifier" name="define" />
     <Arguments>

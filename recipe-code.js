@@ -1,5 +1,5 @@
 const jsdom = require('jsdom'); const { JSDOM } = jsdom; const { readFileSync } = require('fs');
-const { document } = new JSDOM(readFileSync('./recipe-source.xml')).window;
+const { document } = new JSDOM(readFileSync('./recipe.xml')).window;
 
 const recipes = [...document.querySelectorAll('.recipe')].map(recipeEl => (
     {
@@ -13,5 +13,4 @@ const recipes = [...document.querySelectorAll('.recipe')].map(recipeEl => (
 
 
 console.log(JSON.stringify(recipes, null, 2))
-
 
