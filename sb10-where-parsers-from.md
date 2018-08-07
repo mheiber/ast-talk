@@ -2,11 +2,7 @@
 
 - use an existing one
     - JS Parsers:
-        - acorn
-        - babylon
-        - esprima
-        - flow parser
-        - typescript parser
+        - acorn, babylon, esprima, typescript parser
 - use a parser generator
 
 
