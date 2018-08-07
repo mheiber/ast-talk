@@ -7,6 +7,8 @@
 - starring Tim Mcclure and bb-codeshift
 - featuring Max Heiber and the Abstract Syntax Tease
 
+> Full talk, including demo code in https://github.com/mheiber/ast-talk
+
 
 ## STARTING at 12:05!
 ## Abstract Snytax Trees Talk Part 1: Goals
@@ -238,4 +240,3 @@ const sausage = lodash.get(room, 'corner.pizza.toppings[0]')
 
 
 - > Part 2: Tim on code transformation with bb-codeshift
-
