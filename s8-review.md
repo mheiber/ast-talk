@@ -3,7 +3,6 @@
 - Examples:
     - linter
     - compiler
-    - parser
     - JIT
     - Other stuff!
 
