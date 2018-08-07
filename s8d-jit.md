@@ -18,6 +18,7 @@
 
 ```javascript
 const sausage = lodash.get(room, 'corner.pizza.toppings[0]')
+```
 
 - AST:
     - Assignment
@@ -30,5 +31,4 @@ const sausage = lodash.get(room, 'corner.pizza.toppings[0]')
         - Arguments
             - Identifier: room
             - Literal:  'corner.pizza.toppings[0]'
-```
 
