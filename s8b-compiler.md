@@ -11,7 +11,6 @@
 for (const node of ast) {
     switch (node.type) {
        case BinaryExpression:
-            // missing: register logic
             emit(ops[node.op], emit(node.left), emit(node.right))
         ...
     }

@@ -15,7 +15,6 @@
 
 ### Why this matters
 
-
 ```javascript
 const sausage = lodash.get(room, 'corner.pizza.toppings[0]')
 ```
@@ -30,5 +29,5 @@ const sausage = lodash.get(room, 'corner.pizza.toppings[0]')
                     - Identifier: get
         - Arguments
             - Identifier: room
-            - Literal:  'corner.pizza.toppings[0]'
+            - Literal:  `corner.pizza.toppings[0]`
 
