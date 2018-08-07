@@ -17,7 +17,7 @@
 
 
 ```javascript
-const pepperoni = lodash.get(room, 'corner.pizza.toppings[0]')
+const sausage = lodash.get(room, 'corner.pizza.toppings[0]')
 
 - AST:
     - Assignment
