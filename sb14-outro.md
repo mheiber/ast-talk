@@ -5,5 +5,5 @@
 - Get a feel for working with ASTs
 
 
-- > Part 2: Tim on code transformation
+- > Part 2: Tim on code transformation with bb-codeshift
 
