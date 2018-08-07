@@ -1,3 +1,9 @@
-# Review
-- What's an AST?
-- What can it be used for?
+# What can ASTs be used for?
+
+- Examples:
+    - linter
+    - compiler
+    - parser
+    - JIT
+    - Other stuff!
+

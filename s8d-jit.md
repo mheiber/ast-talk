@@ -1,35 +1,22 @@
 
 ## ASTs used in JIT compilers
 
+- Compiled    : C++, OCaml
+- Interpreted : Python
 - JITed       : JavaScript, Java, Lua
 
 
+### Just in Time Compilation:
+
+- If code is expensive and optimizable:
+    - compile it to machine code
+- Otherwise, interpret the code 
+
+
+### Why this matters
+
 
 ```javascript
-function V8 (sourceCode) {
-    const ast = parse(sourceCode)
-    for (const node of ast) {
-        if (optimizer.has(node)) {
-            run(optimizer.get(node)) 
-        }
-        else if (shouldOptimize(node)) {
-            optimizer.compile(node)
-            run(optimizer.get(node))
-        }
-        else {
-            interpret(node)
-        }
-    }
-}
-
-
-
-
-
-
-
-
-
 const pepperoni = lodash.get(room, 'corner.pizza.toppings[0]')
 
 - AST:
@@ -44,3 +31,4 @@ const pepperoni = lodash.get(room, 'corner.pizza.toppings[0]')
             - Identifier: room
             - Literal:  'corner.pizza.toppings[0]'
 ```
+
